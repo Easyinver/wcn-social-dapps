@@ -8,6 +8,12 @@ import "./index.css";
 import App from "./App.tsx";
 import Loading from "./components/Loading.tsx";
 
+import { cellRegistry } from "./services/cellRegistry.ts";
+import { LoginPasswordCell } from "./cells/auth/LoginPasswordCell.tsx";
+
+// Register cells
+cellRegistry.register(LoginPasswordCell);
+
 function ChainSelectAppWrapper() {
   const [chainId, setChainId] = useState<ChainId>("paseo");
 
